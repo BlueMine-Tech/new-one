@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar";
 import Hero from "./components/herosection";
 import About from "./components/aboutsection";
+import WhyChooseUs from "./components/whychooseus";
 
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
       <Navbar />
    <Hero/>
    <About/>
+   <WhyChooseUs/>
     </div>
   );
 }
