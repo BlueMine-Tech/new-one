@@ -7,7 +7,7 @@ const reasons = [
     ),
     title: "Trusted Since 2017",
     desc: "Over 6 years of reliable service to the Thuraiyur and Musiri community — built on integrity and consistency.",
-    accent: "#0088ff",
+    accent: "#0044aa",
   },
   {
     icon: (
@@ -27,7 +27,7 @@ const reasons = [
     ),
     title: "Community Rooted",
     desc: "We are not just a business — we are your neighbors. Deeply invested in the well-being of every family we serve.",
-    accent: "#00c8ff",
+    accent: "#0044aa",
   },
   {
     icon: (
@@ -47,7 +47,7 @@ const reasons = [
     ),
     title: "Government Authorised",
     desc: "Authorised CSC & e-Sevai center — officially empowered to deliver authentic government services to citizens.",
-    accent: "#0088ff",
+    accent: "#0044aa",
   },
   {
     icon: (
@@ -57,7 +57,7 @@ const reasons = [
     ),
     title: "Personalised Service",
     desc: "Every client is treated with care and patience. We guide you through every step — no jargon, no confusion.",
-    accent: "#00c8ff",
+    accent: "#c9a84c",
   },
 ];
 
@@ -72,50 +72,39 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="relative bg-[#060b12] py-24 lg:py-32 overflow-hidden"
+      className="relative bg-[#f7f9fc] py-24 lg:py-32 overflow-hidden"
     >
-      {/* Background orbs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#0044cc]/8 blur-[130px] pointer-events-none" />
+      {/* Background tints */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#0044aa]/4 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#c9a84c]/5 blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] rounded-full bg-[#003388]/6 blur-[100px] pointer-events-none" />
 
       {/* Top separator */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent" />
-
-      {/* Subtle grid */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,136,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(0,136,255,0.8) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/40 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c9a84c]/30 bg-[#c9a84c]/6 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f0d080]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c9a84c]/40 bg-[#fffbf0] mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a84c]" />
             <span
-              className="text-xs text-[#c9a84c]/80 tracking-widest uppercase"
+              className="text-xs text-[#9a7020] tracking-widest uppercase font-semibold"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Why Choose Us
             </span>
           </div>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a1628] leading-tight"
             style={{ fontFamily: "'Exo 2', sans-serif" }}
           >
             The Sakaya Matha{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0088ff] to-[#00d4ff]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0077dd]">
               Difference
             </span>
           </h2>
           <p
-            className="mt-4 text-[#5a8ab0] max-w-lg mx-auto text-base"
+            className="mt-4 text-[#4a6080] max-w-lg mx-auto text-base"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
             We combine government-authorised services, education, and community care — so you never have to look elsewhere.
@@ -127,19 +116,17 @@ export default function WhyChooseUs() {
           {reasons.map((r, i) => (
             <div
               key={r.title}
-              className="group relative p-6 rounded-2xl border border-[#1e3a5f]/50 bg-[#0a1628]/40 hover:border-[#c9a84c]/30 hover:bg-[#0a1628]/70 transition-all duration-300 overflow-hidden"
+              className="group relative p-6 rounded-2xl border border-transparent bg-white hover:border-[#e2d0a0] hover:shadow-[0_8px_32px_rgba(0,68,170,0.07)] transition-all duration-300 overflow-hidden shadow-[0_2px_12px_rgba(0,68,170,0.05)]"
             >
-              {/* Hover glow */}
+              {/* Left accent bar */}
               <div
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  background: `radial-gradient(ellipse at top left, ${r.accent}08 0%, transparent 70%)`,
-                }}
+                className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: r.accent }}
               />
 
               {/* Number watermark */}
               <span
-                className="absolute top-4 right-5 text-6xl font-black opacity-[0.04] select-none"
+                className="absolute top-4 right-5 text-6xl font-black opacity-[0.035] select-none"
                 style={{ fontFamily: "'Exo 2', sans-serif", color: r.accent }}
               >
                 {String(i + 1).padStart(2, "0")}
@@ -148,10 +135,10 @@ export default function WhyChooseUs() {
               <div className="relative">
                 {/* Icon */}
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border transition-colors duration-300"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border transition-all duration-300"
                   style={{
-                    background: `${r.accent}12`,
-                    borderColor: `${r.accent}25`,
+                    background: `${r.accent}0f`,
+                    borderColor: `${r.accent}22`,
                     color: r.accent,
                   }}
                 >
@@ -159,13 +146,13 @@ export default function WhyChooseUs() {
                 </div>
 
                 <h3
-                  className="text-white font-bold text-base mb-2"
+                  className="text-[#0a1628] font-bold text-base mb-2"
                   style={{ fontFamily: "'Exo 2', sans-serif" }}
                 >
                   {r.title}
                 </h3>
                 <p
-                  className="text-[#4a7fa5] text-sm leading-relaxed"
+                  className="text-[#4a6080] text-sm leading-relaxed"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
                   {r.desc}
@@ -176,39 +163,38 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom highlight bar */}
-        <div className="relative rounded-2xl border border-[#c9a84c]/20 bg-gradient-to-r from-[#0a1628]/60 via-[#0d1e38]/60 to-[#0a1628]/60 overflow-hidden">
-          {/* Gold shimmer line */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/50 to-transparent" />
+        <div className="relative rounded-2xl border border-[#e2d0a0] bg-white overflow-hidden shadow-[0_4px_24px_rgba(201,168,76,0.1)]">
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0044aa] via-[#c9a84c] to-[#0044aa]" />
 
           <div className="relative px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-6">
             {/* Left text */}
             <div className="text-center sm:text-left">
               <p
-                className="text-white font-bold text-lg"
+                className="text-[#0a1628] font-bold text-lg"
                 style={{ fontFamily: "'Exo 2', sans-serif" }}
               >
                 Ready to experience the difference?
               </p>
               <p
-                className="text-[#5a8ab0] text-sm mt-1"
+                className="text-[#4a6080] text-sm mt-1"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 Visit us in Thuraiyur or reach out — we're always here to help.
               </p>
             </div>
 
-            {/* Stats row */}
+            {/* Stats */}
             <div className="flex items-center gap-6 sm:gap-8">
               {highlights.map(({ num, label }) => (
                 <div key={label} className="flex flex-col items-center gap-0.5">
                   <span
-                    className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#f0d080] to-[#c9a84c]"
+                    className="text-xl font-black text-[#0044aa]"
                     style={{ fontFamily: "'Exo 2', sans-serif" }}
                   >
                     {num}
                   </span>
                   <span
-                    className="text-[10px] text-[#4a7fa5] text-center whitespace-nowrap"
+                    className="text-[10px] text-[#4a6080] text-center whitespace-nowrap"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
                     {label}
@@ -220,7 +206,7 @@ export default function WhyChooseUs() {
             {/* CTA */}
             <a
               href="#contact"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#b8922a] to-[#f0d080] text-[#090d14] font-semibold rounded-xl text-sm shadow-[0_0_25px_rgba(201,168,76,0.3)] hover:shadow-[0_0_35px_rgba(201,168,76,0.45)] transition-all duration-300"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#c9a84c] to-[#e0b84a] text-white font-semibold rounded-xl text-sm shadow-[0_4px_16px_rgba(201,168,76,0.35)] hover:shadow-[0_6px_24px_rgba(201,168,76,0.5)] transition-all duration-300"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Contact Us
@@ -233,7 +219,7 @@ export default function WhyChooseUs() {
       </div>
 
       {/* Bottom separator */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/25 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent" />
     </section>
   );
 }
