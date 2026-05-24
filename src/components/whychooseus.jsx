@@ -61,11 +61,13 @@ const reasons = [
   },
 ];
 
+// ✅ Updated highlights to match AboutSection trustStats
 const highlights = [
-  { num: "500+", label: "Citizens Served" },
-  { num: "10+", label: "Services Offered" },
-  { num: "5+", label: "School Tie-ups" },
+  { num: "10,000+", label: "Students Trained" },
+  { num: "10+", label: "School Tie-ups" },
+  { num: "3K+", label: "Free & Paid Courses" },
   { num: "Free", label: "Computer Training" },
+  { num: "100%", label: "Placement Training" },
 ];
 
 export default function WhyChooseUs() {
@@ -75,7 +77,7 @@ export default function WhyChooseUs() {
       className="relative bg-[#f7f9fc] py-24 lg:py-32 overflow-hidden"
     >
       {/* Background tints */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#0044aa]/4 blur-[130px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#0044aa]/5 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#c9a84c]/5 blur-[120px] pointer-events-none" />
 
       {/* Top separator */}
@@ -166,7 +168,7 @@ export default function WhyChooseUs() {
         <div className="relative rounded-2xl border border-[#e2d0a0] bg-white overflow-hidden shadow-[0_4px_24px_rgba(201,168,76,0.1)]">
           <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0044aa] via-[#c9a84c] to-[#0044aa]" />
 
-          <div className="relative px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="relative px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-6 flex-wrap">
             {/* Left text */}
             <div className="text-center sm:text-left">
               <p
@@ -184,7 +186,7 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-6 sm:gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
               {highlights.map(({ num, label }) => (
                 <div key={label} className="flex flex-col items-center gap-0.5">
                   <span

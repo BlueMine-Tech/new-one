@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 const stats = [
   { value: "2017", label: "Founded" },
   { value: "6+", label: "Years of Service" },
-  { value: "500+", label: "Clients Served" },
+  { value: "10000+", label: "Students Trained" },
   { value: "10+", label: "Services Offered" },
 ];
 
@@ -128,17 +128,17 @@ export default function HeroSection() {
               Your Trusted{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0077dd]">
-                  Digital
+                  Education
                 </span>
                 <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-[#c9a84c] to-[#f0d080] rounded-full" />
               </span>{" "}
               &{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0066cc]">
-                Education
+                 Digital
               </span>
               <br />
-              <span className="text-[#334466]">Partner in</span>{" "}
-              <span className="text-[#0a1628]">Thuraiyur</span>
+              <span className="text-[#334466]">Service Partner</span>{" "}
+             
             </h1>
 
             {/* Subheading */}

@@ -38,22 +38,29 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2017", event: "Founded as Sakaya Matha Xerox Center, Krishnapuram" },
-  { year: "2017", event: "Expanded into CSC & e-Sevai digital services" },
+  { year: "2017", event: "Founded as Sagayamadha Xerox Center, Krishnapuram" },
+  { year: "2018", event: "Expanded into CSC & e-Sevai digital services" },
   { year: "2019", event: "Launched A to Z Service & Consultancy in Thuraiyur" },
-  { year: "2019+", event: "Partnered with HIBM Abacus & CSC Olympiad programs" },
-  { year: "Today", event: "Operating as Sakaya Matha Digital Hub & Academy" },
+  { year: "2020", event: "Partnered with HIBM Abacus & launched CSC Academy programs" },
+  { year: "2026", event: "Established as an official Exam Center" },
+];
+
+const trustStats = [
+  { num: "2017", text: "Est. Krishnapuram" },
+  { num: "2019", text: "Expanded to Thuraiyur" },
+  { num: "10,000+", text: "Students Trained" },
+  { num: "10+", text: "School Tie-ups" },
+  { num: "3K+", text: "Free & Paid Courses" },
+  { num: "Free", text: "Computer Training" },
+  { num: "100%", text: "Placement Training" },
 ];
 
 export default function AboutSection() {
   return (
     <section id="about" className="relative bg-white py-24 lg:py-32 overflow-hidden">
 
-      {/* Background tints */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#0044aa]/4 blur-[130px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#0044aa]/5 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#c9a84c]/5 blur-[100px] pointer-events-none" />
-
-      {/* Top separator */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/40 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
@@ -91,7 +98,6 @@ export default function AboutSection() {
 
           {/* Left — Story */}
           <div>
-            {/* Story block */}
             <div
               className="relative pl-5 mb-8"
               style={{ borderLeft: "3px solid #c9a84c" }}
@@ -100,7 +106,7 @@ export default function AboutSection() {
                 className="text-[#3a5070] text-base leading-loose mb-4"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                <span className="text-[#0a1628] font-semibold">Sakaya Matha</span> began in 2017 as a modest Xerox center in Krishnapuram, built on a foundation of dependability and community trust. Over time, we evolved into a full-spectrum digital and educational hub — driven by innovation and genuine care for the people we serve.
+                <span className="text-[#0a1628] font-semibold">Sagayamadha</span> began in 2017 as a modest Xerox center in Krishnapuram, built on a foundation of dependability and community trust. Over time, we evolved into a full-spectrum digital and educational hub — driven by innovation and genuine care for the people we serve.
               </p>
               <p
                 className="text-[#3a5070] text-base leading-loose"
@@ -198,7 +204,7 @@ export default function AboutSection() {
                     className="text-[#0a1628] font-bold text-lg mb-1"
                     style={{ fontFamily: "'Exo 2', sans-serif" }}
                   >
-                    Sakaya Matha Digital Hub & Academy
+                    Sagayamadha Tech Hub & Academy
                   </h3>
                   <p
                     className="text-[#4a6080] text-sm leading-relaxed"
@@ -236,7 +242,15 @@ export default function AboutSection() {
                     className="group p-4 rounded-xl border border-[#dde8f8] bg-white hover:border-[#c9a84c]/50 hover:shadow-sm transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="w-8 h-8 rounded-lg bg-[#0044aa]/8 border border-[#0044aa]/15 flex items-center justify-center text-[#0044aa] group-hover:bg-[#c9a84c]/12 group-hover:border-[#c9a84c]/30 group-hover:text-[#9a7020] transition-colors">
+                      {/* FIX: replaced /8 and /15 opacity shorthands with inline styles for arbitrary colors */}
+                      <div
+                        className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
+                        style={{
+                          backgroundColor: "rgba(0, 68, 170, 0.08)",
+                          border: "1px solid rgba(0, 68, 170, 0.15)",
+                          color: "#0044aa",
+                        }}
+                      >
                         {v.icon}
                       </div>
                       <h4
@@ -257,7 +271,7 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* CTA Row */}
+            {/* FIX: Added missing <a> opening tags in CTA Row */}
             <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="#contact"
@@ -274,20 +288,15 @@ export default function AboutSection() {
                 Explore Services
               </a>
             </div>
+
           </div>
         </div>
 
         {/* Trust Bar */}
         <div className="relative p-6 rounded-2xl border border-[#e2d0a0] bg-gradient-to-r from-[#fffbf0] via-white to-[#fffbf0] shadow-[0_4px_24px_rgba(201,168,76,0.08)]">
           <div className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl bg-gradient-to-r from-transparent via-[#c9a84c]/60 to-transparent" />
-          <div className="relative flex flex-wrap items-center justify-center gap-6 lg:gap-12">
-            {[
-              { num: "2017", text: "Est. Krishnapuram" },
-              { num: "2019", text: "Expanded to Thuraiyur" },
-              { num: "500+", text: "Citizens Served" },
-              { num: "5+", text: "School Tie-ups" },
-              { num: "Free", text: "Computer Training" },
-            ].map(({ num, text }) => (
+          <div className="relative flex flex-wrap items-center justify-center gap-6 lg:gap-10">
+            {trustStats.map(({ num, text }) => (
               <div key={text} className="flex flex-col items-center gap-1">
                 <span
                   className="text-2xl lg:text-3xl font-black text-[#0044aa]"
@@ -305,10 +314,11 @@ export default function AboutSection() {
             ))}
           </div>
         </div>
+
       </div>
 
-      {/* Bottom separator */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent" />
+
     </section>
   );
 }

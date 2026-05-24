@@ -43,13 +43,13 @@ export default function Navbar() {
               className="text-[#0a1628] font-black text-base leading-none"
               style={{ fontFamily: "'Exo 2', sans-serif" }}
             >
-              Sakaya Matha
+              Sagayamadha
             </span>
             <span
               className="text-[9px] text-[#9a7020] tracking-[0.18em] uppercase mt-0.5"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              Digital Hub & Academy
+              Tech hub
             </span>
           </div>
         </a>
