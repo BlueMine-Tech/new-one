@@ -63,7 +63,7 @@ const reasons = [
 
 // ✅ Updated highlights to match AboutSection trustStats
 const highlights = [
-  { num: "10,000+", label: "Students Trained" },
+  { num: "1000+", label: "Students Trained" },
   { num: "10+", label: "School Tie-ups" },
   { num: "3K+", label: "Free & Paid Courses" },
   { num: "Free", label: "Computer Training" },
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a1628] leading-tight"
             style={{ fontFamily: "'Exo 2', sans-serif" }}
           >
-            The Sakaya Matha{" "}
+            The Sagayamadha{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0077dd]">
               Difference
             </span>

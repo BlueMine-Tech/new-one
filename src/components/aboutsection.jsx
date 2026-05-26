@@ -5,8 +5,8 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: "Trusted Quality",
-    desc: "Every service is delivered with integrity, accuracy, and a commitment to excellence.",
+    title: "🎯 Personal Attention for Every Student",
+    desc: "We understand that every child learns differently. Our supportive guidance helps students grow with confidence and clarity.",
   },
   {
     icon: (
@@ -14,8 +14,8 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: "Community Focus",
-    desc: "Rooted in Thuraiyur, we serve and uplift our local community through accessible services.",
+    title: "📘 Career & Competitive Exam Preparation",
+    desc: "From digital skills to competitive coaching, we prepare students for academic success and future career opportunities.",
   },
   {
     icon: (
@@ -23,8 +23,8 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
-    title: "Education First",
-    desc: "Nurturing young minds through Abacus training, Olympiads, and free computer programs.",
+    title: "🛡️ Trusted & Student-Friendly Environment",
+    desc: "Parents trust us for our disciplined atmosphere, caring mentorship, and commitment to every student's progress",
   },
   {
     icon: (
@@ -32,23 +32,30 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: "One-Stop Access",
-    desc: "Government services, digital training, and documentation — all under a single roof.",
+    title: "Modern Learning with Real-World Skills",
+    desc: "We combine education, technology, and practical digital knowledge to help students succeed in today's world..",
   },
 ];
 
-const milestones = [
-  { year: "2017", event: "Founded as Sagayamadha Xerox Center, Krishnapuram" },
-  { year: "2018", event: "Expanded into CSC & e-Sevai digital services" },
-  { year: "2019", event: "Launched A to Z Service & Consultancy in Thuraiyur" },
-  { year: "2020", event: "Partnered with HIBM Abacus & launched CSC Academy programs" },
-  { year: "2026", event: "Established as an official Exam Center" },
+const growthMilestones = [
+  { year: "2017", emoji: "🖨", label: "Started as a Xerox & Basic Service Center in Krishnapuram" },
+  { year: "2018", emoji: "📄", label: "Expanded into CSC & e-Sevai Government Services" },
+  { year: "2019", emoji: "💻", label: "Introduced Computer Education & Digital Training" },
+  { year: "2021", emoji: "🧠", label: "Started Abacus & Skill Development Programs" },
+  { year: "2023", emoji: "📘", label: "Expanded into Competitive Exam Coaching" },
+  { year: "2024", emoji: "🌍", label: "Became a Trusted Digital & Educational Hub Serving Thousands" },
+];
+
+const achievements = [
+  { year: "2023", title: "Tamilnadu Agri Camp" },
+  { year: "2024", title: "CSC Olympiad Zonal Level 2nd Winner" },
+  { year: "2026", title: "CSC Olympiad National Level 2nd Winner" },
 ];
 
 const trustStats = [
   { num: "2017", text: "Est. Krishnapuram" },
   { num: "2019", text: "Expanded to Thuraiyur" },
-  { num: "10,000+", text: "Students Trained" },
+  { num: "1000+", text: "Students Trained" },
   { num: "10+", text: "School Tie-ups" },
   { num: "3K+", text: "Free & Paid Courses" },
   { num: "Free", text: "Computer Training" },
@@ -80,53 +87,102 @@ export default function AboutSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a1628] leading-tight"
             style={{ fontFamily: "'Exo 2', sans-serif" }}
           >
-            A Humble Beginning,{" "}
+            From a Small Beginning,{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0077dd]">
-              A Lasting Impact
+              to a Trusted Institution
             </span>
           </h2>
           <p
             className="mt-4 text-[#4a6080] max-w-xl mx-auto text-base"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Quality · Trust · Community — since 2017
+            For over 10 years, we have proudly guided students, families, and communities toward education, digital access, and brighter opportunities.
           </p>
         </div>
 
         {/* Main Grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-20">
 
-          {/* Left — Story */}
+          {/* Left — Growth Timeline + Achievements */}
           <div>
-            <div
-              className="relative pl-5 mb-8"
-              style={{ borderLeft: "3px solid #c9a84c" }}
-            >
+
+            {/* Growth Milestones replacing the paragraph */}
+            <div className="relative mb-8" style={{ borderLeft: "3px solid #c9a84c" }}>
+              <div className="space-y-0">
+                {growthMilestones.map(({ year, emoji, label }, i) => (
+                  <div
+                    key={year}
+                    className="relative pl-5 py-3 hover:bg-[#fffbf0] transition-colors rounded-r-xl group"
+                    style={{
+                      borderBottom: i < growthMilestones.length - 1 ? "1px solid rgba(201,168,76,0.15)" : "none",
+                    }}
+                  >
+                    {/* Dot on the left border */}
+                    <span
+                      className="absolute left-[-7px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#c9a84c] border-2 border-white"
+                    />
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="flex-shrink-0 px-2 py-0.5 text-[10px] font-black text-white bg-[#0044aa] rounded-md"
+                        style={{ fontFamily: "'Exo 2', sans-serif" }}
+                      >
+                        {year}
+                      </span>
+                      <span className="text-sm">{emoji}</span>
+                      <p
+                        className="text-[#3a5070] text-xs leading-relaxed"
+                        style={{ fontFamily: "'DM Sans', sans-serif" }}
+                      >
+                        {label}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Achievements */}
+            <div className="mb-8">
               <p
-                className="text-[#3a5070] text-base leading-loose mb-4"
+                className="text-xs text-[#9a7020] tracking-widest uppercase font-semibold mb-4"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                <span className="text-[#0a1628] font-semibold">Sagayamadha</span> began in 2017 as a modest Xerox center in Krishnapuram, built on a foundation of dependability and community trust. Over time, we evolved into a full-spectrum digital and educational hub — driven by innovation and genuine care for the people we serve.
+                🏆 Our Achievements
               </p>
-              <p
-                className="text-[#3a5070] text-base leading-loose"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                From CSC and e-Sevai services to Panchayat approvals, medical assistance, Abacus training, and free computer literacy programs — we bring essential services and opportunities to every doorstep in Thuraiyur and Musiri.
-              </p>
+              <div className="space-y-3">
+                {achievements.map(({ year, title }) => (
+                  <div
+                    key={title}
+                    className="flex items-center gap-4 p-3 rounded-xl border border-[#e2d0a0] bg-[#fffbf0] hover:border-[#c9a84c]/60 hover:shadow-sm transition-all"
+                  >
+                    <span
+                      className="flex-shrink-0 px-2.5 py-1 text-[10px] font-black text-white bg-gradient-to-r from-[#c9a84c] to-[#e0b84a] rounded-md shadow-sm"
+                      style={{ fontFamily: "'Exo 2', sans-serif" }}
+                    >
+                      {year}
+                    </span>
+                    <p
+                      className="text-[#4a6080] text-xs font-medium leading-relaxed"
+                      style={{ fontFamily: "'DM Sans', sans-serif" }}
+                    >
+                      {title}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Vision & Mission */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
                   heading: "Our Vision",
-                  text: "To be the most trusted digital and educational hub for every citizen in our community.",
+                  text: "To help every student learn with confidence, grow with skills, and succeed through quality education and trusted guidance.",
                   icon: "🎯",
                 },
                 {
                   heading: "Our Mission",
-                  text: "Bridging the gap between people and essential services through accessibility, integrity, and education.",
+                  text: "Empowering students through education, skills, and digital innovation.",
                   icon: "🚀",
                 },
               ].map((item) => (
@@ -149,34 +205,6 @@ export default function AboutSection() {
                   </p>
                 </div>
               ))}
-            </div>
-
-            {/* Timeline */}
-            <div>
-              <p
-                className="text-xs text-[#9a7020] tracking-widest uppercase font-semibold mb-4"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Our Journey
-              </p>
-              <div className="space-y-3">
-                {milestones.map(({ year, event }, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <span
-                      className="flex-shrink-0 px-2.5 py-1 text-[10px] font-bold text-white bg-[#0044aa] rounded-md"
-                      style={{ fontFamily: "'Exo 2', sans-serif" }}
-                    >
-                      {year}
-                    </span>
-                    <p
-                      className="text-[#4a6080] text-xs leading-relaxed pt-1"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      {event}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
@@ -204,7 +232,7 @@ export default function AboutSection() {
                     className="text-[#0a1628] font-bold text-lg mb-1"
                     style={{ fontFamily: "'Exo 2', sans-serif" }}
                   >
-                    Sagayamadha Tech Hub & Academy
+                    Sagayamadha Tech Hub
                   </h3>
                   <p
                     className="text-[#4a6080] text-sm leading-relaxed"
@@ -233,7 +261,7 @@ export default function AboutSection() {
                 className="text-xs text-[#9a7020] tracking-widest uppercase font-semibold mb-4"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Why Choose Us
+                Why Students & Parents Choose Us
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {values.map((v) => (
@@ -242,7 +270,6 @@ export default function AboutSection() {
                     className="group p-4 rounded-xl border border-[#dde8f8] bg-white hover:border-[#c9a84c]/50 hover:shadow-sm transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 mb-2">
-                      {/* FIX: replaced /8 and /15 opacity shorthands with inline styles for arbitrary colors */}
                       <div
                         className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
                         style={{
@@ -271,7 +298,6 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* FIX: Added missing <a> opening tags in CTA Row */}
             <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="#contact"

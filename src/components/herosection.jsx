@@ -2,20 +2,19 @@ import { useEffect, useRef } from "react";
 
 const stats = [
   { value: "2017", label: "Founded" },
-  { value: "6+", label: "Years of Service" },
-  { value: "10000+", label: "Students Trained" },
-  { value: "10+", label: "Services Offered" },
+  { value: "10+", label: "Years of Service" },
+  { value: "1000+", label: "Students Trained" },
+  { value: "10000+", label: "Clients Served" },
 ];
 
 const services = [
+  "Computer Education",
+  "CSC Olympiad",
+  "Abacus Training",
   "CSC Services",
   "e-Sevai",
   "Document Printing",
-  "Abacus Training",
-  "CSC Olympiad",
-  "Computer Education",
 ];
-
 export default function HeroSection() {
   const canvasRef = useRef(null);
 
@@ -109,64 +108,52 @@ export default function HeroSection() {
           {/* Left Column */}
           <div className="flex-1 max-w-2xl">
 
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#c9a84c]/50 bg-[#fffbf0] mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse" />
-              <span
-                className="text-xs text-[#9a7020] tracking-widest uppercase font-semibold"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Digital Hub & Academy
-              </span>
-            </div>
+        <h1
+  className="text-4xl sm:text-5xl lg:text-5xl font-black leading-[1.05] text-[#0a1628] mb-6"
+  style={{ fontFamily: "'Exo 2', sans-serif" }}
+>
+  Empowering Futures
+  <br />
+  Through{" "}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0077dd]">
+    Learning
+  </span>{" "}
+  <span className="text-[#c9a84c]">
+    &
+  </span>
+  <br />
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0066cc]">
+    Digital Innovation
+  </span>
+</h1> 
 
-            {/* Headline */}
-            <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-[#0a1628] mb-6"
-              style={{ fontFamily: "'Exo 2', sans-serif" }}
-            >
-              Your Trusted{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0077dd]">
-                  Education
-                </span>
-                <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-[#c9a84c] to-[#f0d080] rounded-full" />
-              </span>{" "}
-              &{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0044aa] to-[#0066cc]">
-                 Digital
-              </span>
-              <br />
-              <span className="text-[#334466]">Service Partner</span>{" "}
-             
-            </h1>
 
             {/* Subheading */}
             <p
               className="text-base lg:text-lg text-[#4a6080] leading-relaxed mb-10 max-w-xl"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              From CSC & e-Sevai services to Abacus training and Computer Education — one roof, one trusted name. Serving Thuraiyur and Musiri since 2017.
+Empowering students with quality education, career guidance, digital skills and trusted e-services under one roof.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-12">
               <a
-                href="#contact"
+                href="#services"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#c9a84c] to-[#e0b84a] text-white font-semibold rounded-xl text-sm shadow-[0_4px_20px_rgba(201,168,76,0.35)] hover:shadow-[0_6px_28px_rgba(201,168,76,0.5)] transition-all duration-300"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                <span>Get Our Services</span>
+                <span>Explore Services</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
               <a
-                href="#services"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#0044aa]/25 text-[#0044aa] font-semibold rounded-xl text-sm hover:border-[#0044aa] hover:bg-[#0044aa]/5 transition-all duration-300"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Explore Services
+                Start learning
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -174,7 +161,7 @@ export default function HeroSection() {
             </div>
 
             {/* Service Tags */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 max-w-[420px]">
               {services.map((s) => (
                 <span
                   key={s}
@@ -229,9 +216,9 @@ export default function HeroSection() {
                     What We Do
                   </p>
                   {[
-                    ["Government Services", "Education"],
-                    ["Digital Training", "Documentation"],
-                    ["Consultancy", "Community"],
+                    [ "Education (Computer Class and  Abacus Training)", ],
+                    ["Digital Training", "e-Sevai Services"],
+                    ["Scholorship Guidance", "Community",],
                   ].map((row, i) => (
                     <div key={i} className="flex gap-2">
                       {row.map((item) => (
@@ -255,7 +242,7 @@ export default function HeroSection() {
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
               </svg>
               <span className="text-xs text-[#5570a0]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                Headquartered in <span className="text-[#9a7020] font-semibold">Thuraiyur, Tamil Nadu</span>
+                Headquartered in <span className="text-[#9a7020] font-semibold">Trichy, Tamil Nadu</span>
               </span>
             </div>
           </div>

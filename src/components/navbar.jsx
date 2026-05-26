@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import logo from '../assets/logo.png'
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,31 +27,17 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10">
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-[#c9a84c] to-[#e8c84a] shadow-[0_2px_12px_rgba(201,168,76,0.35)] group-hover:shadow-[0_4px_18px_rgba(201,168,76,0.5)] transition-shadow" />
-            <div className="absolute inset-[2px] rounded-[6px] bg-white flex items-center justify-center">
-              <span
-                className="text-[#0044aa] font-black text-lg leading-none"
-                style={{ fontFamily: "'Exo 2', sans-serif" }}
-              >
-                SM
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span
-              className="text-[#0a1628] font-black text-base leading-none"
-              style={{ fontFamily: "'Exo 2', sans-serif" }}
-            >
-              Sagayamadha
-            </span>
-            <span
-              className="text-[9px] text-[#9a7020] tracking-[0.18em] uppercase mt-0.5"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              Tech hub
-            </span>
-          </div>
+          <img
+  src={logo}
+  alt="Sagayamadha Logo"
+  className="h-14 w-auto object-contain"
+/>
+     <span
+  className="bg-gradient-to-r from-[#0044aa] via-[#c9a84c] to-[#00a86b] bg-clip-text text-transparent font-black text-xl leading-none uppercase"
+  style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: "0.1em" }}
+>
+  Sagayamadha Tech Hub
+</span>
         </a>
 
         {/* Desktop Links */}
